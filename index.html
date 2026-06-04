@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+        />
+        <meta
+            name="description"
+            content="Software Engineer passionate about building modern web applications,
+            solving real-world problems, and creating exceptional user experiences. Explore my projects, skills, and professional journey."
+        />
+
+        <title>Mahmoud Ramzy — Software Engineer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@200;300;400;500;600&family=JetBrains+Mono:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/x-icon" href="images/fav_icon.png" />
+
+        <link rel="stylesheet" href="CSS/style.css" />
+    </head>
+    <body>
+        <!-- LOADER -->
+        <div id="loader">
+            <div class="ldr-n">
+                <span id="ln">0</span><span>%</span
+                ><span class="fill" id="lf">0%</span>
+            </div>
+            <div class="ldr-lb">Loading Portfolio</div>
+        </div>
+
+        <!-- CURSORS -->
+        <div id="cursor-dot"></div>
+        <div id="cursor-ring"></div>
+
+        <!-- MOBILE NAV OVERLAY -->
+        <div class="nav-mobile" id="nav-mobile">
+            <a href="#about" class="nm-lnk">About</a>
+            <a href="#experience" class="nm-lnk">Experience</a>
+            <a href="#skills" class="nm-lnk">Skills</a>
+            <a href="#projects" class="nm-lnk">Projects</a>
+            <a href="#contact" class="nm-lnk">Contact</a>
+            <a href="CV/mahmoud_ramzy_cv.pdf" download class="nm-resume"
+                >↓ Download CV</a
+            >
+        </div>
+
+        <!-- NAVBAR -->
+        <nav id="navbar">
+            <a href="#hero" class="nav-logo"
+                ><img src="images/f.png" alt="logo"
+            /></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="CV/mahmoud_ramzy_cv.pdf" download class="nav-resume"
+                    >↓ Resume</a
+                >
+                <a
+                    href="mailto:mahmoudramzy741@gmail.com"
+                    class="nav-hire magnetic"
+                    ><span>Hire Me</span></a
+                >
+            </div>
+            <button class="nav-burger" id="nav-burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <!-- ══════ HERO ══════ -->
+        <section id="hero">
+            <div class="mesh-bg"></div>
+            <div class="grid-overlay"></div>
+            <canvas id="canvas-hero"></canvas>
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="badge-dot"></div>
+                    <span class="badge-txt"
+                        >Alexandria, Egypt · Open to Work</span
+                    >
+                </div>
+
+                <h1 class="hero-name">
+                    <span class="l1">Mahmoud</span>
+                    <span class="l2">Ramzy<span class="ft">Ramzy</span></span>
+                </h1>
+
+                <div class="hero-tag">
+                    Software Engineer &amp; Full-Stack Developer
+                </div>
+
+                <p class="hero-desc">
+                    Building scalable, elegant software with React, Node.js, and
+                    Spring Boot. Alexandria University Computer Engineering
+                    graduate — passionate about clean architecture, AI, and
+                    meaningful products.
+                </p>
+
+                <div class="hero-acts">
+                    <a href="#projects" class="btn-gold magnetic">
+                        <span>View My Work</span>
+                        <span class="arr">→</span>
+                    </a>
+                    <a
+                        href="CV/mahmoud_ramzy_cv.pdf"
+                        download
+                        class="btn-dl magnetic"
+                    >
+                        <svg
+                            width="13"
+                            height="13"
+                            viewBox="0 0 13 13"
+                            fill="none"
+                        >
+                            <path
+                                d="M6.5 1v7M3.5 5.5l3 3 3-3M1.5 10h10"
+                                stroke="currentColor"
+                                stroke-width="1.4"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="sphere-wrap">
+                <canvas id="sphere-canvas" width="440" height="440"></canvas>
+            </div>
+
+            <div class="hero-coords">
+                <span>31.2001° N</span><br /><span>29.9187° E</span>
+            </div>
+
+            <div class="scroll-ind">
+                <div class="scroll-trk"></div>
+                <span class="scroll-lbl">Scroll</span>
+            </div>
+        </section>
+
+        <!-- ══════ SOCIAL PROOF ══════ -->
+        <div class="proof-bar">
+            <div class="proof-inner">
+                <div class="proof-item reveal">
+                    <div class="proof-num">5+</div>
+                    <div class="proof-lbl">Projects Built</div>
+                </div>
+                <div class="proof-item reveal" style="transition-delay: 0.1s">
+                    <div class="proof-num">500+</div>
+                    <div class="proof-lbl">Students Mentored</div>
+                </div>
+                <div class="proof-item reveal" style="transition-delay: 0.2s">
+                    <div class="proof-num">3</div>
+                    <div class="proof-lbl">Certifications</div>
+                </div>
+                <div class="proof-item reveal" style="transition-delay: 0.3s">
+                    <div class="proof-num">3.8</div>
+                    <div class="proof-lbl">GPA — Last Term</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════ MARQUEE ══════ -->
+        <div class="mq-strip">
+            <div class="mq-vp">
+                <div class="mq-trk" id="mq-a"></div>
+                <div class="mq-trk" id="mq-b"></div>
+            </div>
+        </div>
+
+        <!-- ══════ WHY HIRE ME ══════ -->
+        <section id="why">
+            <div class="sec-tag reveal">00 — Why Hire Me</div>
+            <div class="why-top">
+                <h2 class="sec-ttl reveal">
+                    What I bring<br />to <em>the table</em>
+                </h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item reveal" style="transition-delay: 0.05s">
+                    <div class="why-icon">⚡</div>
+                    <div>
+                        <div class="why-title">
+                            Strong Full-Stack Foundation
+                        </div>
+                        <div class="why-desc">
+                            React, Node.js, Spring Boot, MySQL — shipped from
+                            frontend to database in real team projects.
+                        </div>
+                    </div>
+                </div>
+                <div class="why-item reveal" style="transition-delay: 0.1s">
+                    <div class="why-icon">🧠</div>
+                    <div>
+                        <div class="why-title">
+                            AI &amp; Machine Learning Background
+                        </div>
+                        <div class="why-desc">
+                            Deep Learning Specialization (deeplearning.ai), NLP
+                            graduation project, and object detection training.
+                        </div>
+                    </div>
+                </div>
+                <div class="why-item reveal" style="transition-delay: 0.15s">
+                    <div class="why-icon">🎓</div>
+                    <div>
+                        <div class="why-title">
+                            Teaching &amp; Communication Skills
+                        </div>
+                        <div class="why-desc">
+                            Mentored 500+ students as a TA — explaining complex
+                            topics clearly is a superpower in any team.
+                        </div>
+                    </div>
+                </div>
+                <div class="why-item reveal" style="transition-delay: 0.2s">
+                    <div class="why-icon">🤝</div>
+                    <div>
+                        <div class="why-title">
+                            Team Player with Real Collaboration
+                        </div>
+                        <div class="why-desc">
+                            Multiple projects built in cross-functional teams
+                            using Git, GitHub, and Agile workflows.
+                        </div>
+                    </div>
+                </div>
+                <div class="why-item reveal" style="transition-delay: 0.25s">
+                    <div class="why-icon">🚀</div>
+                    <div>
+                        <div class="why-title">Fast Learner, High Drive</div>
+                        <div class="why-desc">
+                            Self-taught multiple stacks and earned 3
+                            certifications alongside a demanding engineering
+                            degree.
+                        </div>
+                    </div>
+                </div>
+                <div class="why-item reveal" style="transition-delay: 0.3s">
+                    <div class="why-icon">📍</div>
+                    <div>
+                        <div class="why-title">Open to Work — Now</div>
+                        <div class="why-desc">
+                            Based in Alexandria, available for full-time roles.
+                            Open to remote &amp; relocation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="why-quote reveal" style="transition-delay: 0.35s">
+                <p>
+                    "I don't just write code — I build systems that solve real
+                    problems and explain them clearly to the people who use
+                    them."
+                </p>
+                <cite>— Mahmoud Ramzy</cite>
+            </div>
+            <div
+                style="
+                    margin-top: clamp(24px, 3vw, 40px);
+                    display: flex;
+                    gap: 12px;
+                    flex-wrap: wrap;
+                "
+            >
+                <a href="mailto:mahmoudramzy741@gmail.com" class="btn-gold">
+                    <span>Get In Touch</span><span class="arr">→</span>
+                </a>
+                <a href="CV/mahmoud_ramzy_cv.pdf" download class="btn-dl">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                        <path
+                            d="M6.5 1v7M3.5 5.5l3 3 3-3M1.5 10h10"
+                            stroke="currentColor"
+                            stroke-width="1.4"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
+                    <span>Download CV</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ══════ ABOUT ══════ -->
+        <section id="about">
+            <div class="sec-tag reveal">01 — About</div>
+            <div class="about-lay">
+                <div class="reveal-l">
+                    <h2 class="sec-ttl">
+                        Crafting<br /><em>digital</em><br />experiences
+                    </h2>
+                    <div class="about-copy">
+                        <p>
+                            Software engineer with a
+                            <strong
+                                >solid foundation in full-stack
+                                development</strong
+                            >
+                            and an academic background in AI. I build responsive
+                            applications, optimize algorithms, and collaborate
+                            in Agile environments.
+                        </p>
+                        <p>
+                            Graduated from <em>Alexandria University</em>,
+                            Faculty of Computer &amp; Systems Engineering, with
+                            a Last Term GPA of <em>3.8</em> and a Graduation
+                            Project Grade of <em>A+</em>.
+                        </p>
+                        <p>
+                            Beyond coding, I'm passionate about
+                            <em>teaching</em> — served as a Teaching Assistant
+                            covering Discrete Mathematics, Network Security, and
+                            OOP across two universities.
+                        </p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-b magnetic">
+                            <div class="stat-n">3.8</div>
+                            <div class="stat-l">Last Term GPA</div>
+                        </div>
+                        <div class="stat-b magnetic">
+                            <div class="stat-n">A+</div>
+                            <div class="stat-l">Graduation Project</div>
+                        </div>
+                        <div class="stat-b magnetic">
+                            <div class="stat-n">5+</div>
+                            <div class="stat-l">Major Projects</div>
+                        </div>
+                        <div class="stat-b magnetic">
+                            <div class="stat-n">3</div>
+                            <div class="stat-l">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-r">
+                    <div class="orbit-wrap" id="orbit-wrap">
+                        <div class="orbit-core">
+                            <div class="orbit-core-t">Tech<br />Stack</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edu-band reveal">
+                <div class="edu-tile">
+                    <div class="edu-k">Education</div>
+                    <div class="edu-nm">Alexandria University</div>
+                    <div class="edu-dt">
+                        BSc. Computer &amp; Systems Engineering · 2019–2024
+                    </div>
+                </div>
+                <div class="edu-tile">
+                    <div class="edu-k">Specialization</div>
+                    <div class="edu-nm">Deep Learning</div>
+                    <div class="edu-dt">
+                        Coursera · deeplearning.ai · Neural Networks, CNNs, RNNs
+                        · 2023
+                    </div>
+                </div>
+                <div class="edu-tile">
+                    <div class="edu-k">Training</div>
+                    <div class="edu-nm">Object Detection</div>
+                    <div class="edu-dt">
+                        YOLO · Summer Training · Alexandria University · 2023
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ EXPERIENCE ══════ -->
+        <section id="experience">
+            <div class="sec-tag reveal">02 — Experience</div>
+            <h2 class="sec-ttl reveal">Work &amp;<br /><em>Training</em></h2>
+            <div class="tl-list">
+                <div class="tl-entry reveal">
+                    <div class="tl-date">Sep 2024<br />—<br />Jan 2025</div>
+                    <div class="tl-body">
+                        <div class="tl-role">Teaching Assistant</div>
+                        <div class="tl-org">
+                            Alexandria University &amp; Alexandria National
+                            University
+                        </div>
+                        <ul class="tl-bul">
+                            <li>
+                                Taught Discrete Mathematics, Network Security,
+                                and OOP to 500+ students
+                            </li>
+                            <li>
+                                Prepared assignments, exams, and evaluated
+                                student performance across multiple cohorts
+                            </li>
+                            <li>
+                                Simplified complex CS topics, improving student
+                                comprehension rates measurably
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tl-entry reveal">
+                    <div class="tl-date">Jul 2023<br />—<br />Sep 2023</div>
+                    <div class="tl-body">
+                        <div class="tl-role">Deep Learning Intern</div>
+                        <div class="tl-org">
+                            Alexandria University — Summer Training
+                        </div>
+                        <ul class="tl-bul">
+                            <li>
+                                Completed the full Deep Learning Specialization
+                                (deeplearning.ai / Coursera)
+                            </li>
+                            <li>
+                                Led a team of 3 on real-time object detection
+                                with YOLO on custom datasets
+                            </li>
+                            <li>
+                                Hands-on with CNNs, image datasets, and
+                                end-to-end model evaluation pipelines
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SKILLS ══════ -->
+        <section id="skills">
+            <div class="sec-tag reveal">03 — Skills</div>
+            <h2 class="sec-ttl reveal">Technical<br /><em>Expertise</em></h2>
+            <div class="sk-grid" id="skills-grid"></div>
+        </section>
+
+        <!-- ══════ PROJECTS ══════ -->
+        <section id="projects">
+            <div class="sec-tag reveal">04 — Projects</div>
+            <h2 class="sec-ttl reveal">Selected<br /><em>Work</em></h2>
+
+            <!-- Featured project -->
+            <div class="feat-proj reveal">
+                <div class="feat-left">
+                    <div>
+                        <div class="feat-badge">
+                            <span class="badge-dot"></span
+                            ><span class="feat-badge-t">Featured Project</span>
+                        </div>
+                        <div class="feat-num">01 — Graduation Project</div>
+                        <div class="feat-title">
+                            Hate Speech Detection<br />in Arabic Tweets
+                        </div>
+                        <div class="feat-desc">
+                            NLP system for detecting hate speech in Arabic
+                            social media at scale. Tackled the challenge of
+                            Arabic dialectal text by combining advanced
+                            preprocessing, data augmentation, and an ensemble of
+                            deep learning models (BiLSTM + BERT-based). Improved
+                            the F1-score from 0.528 to
+                            <strong style="color: var(--gold)">0.5479</strong> —
+                            a meaningful gain given how sparse and noisy the
+                            data was. Earned an
+                            <strong style="color: var(--gold)">A+</strong>
+                            graduation project grade.
+                        </div>
+                        <div class="feat-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">BERT</span>
+                            <span class="tag">BiLSTM</span>
+                            <span class="tag">Data Augmentation</span>
+                        </div>
+                    </div>
+                    <div class="feat-links">
+                        <a
+                            href="https://drive.google.com/file/d/1d_tKfs8DySvAWWDrs1EYsRw0A5nEXUQ-/view?usp=sharing"
+                            target="_blank"
+                            class="feat-link gh"
+                            ><span>📋 Report</span></a
+                        >
+                        <a href="#contact" class="feat-link"
+                            ><span>✉ Ask Me About It</span></a
+                        >
+                    </div>
+                </div>
+                <div class="feat-visual">
+                    <!-- start test -->
+                    <div class="network"></div>
+                    <div class="core"></div>
+                    <div class="orbit word1">F1: 0.5479</div>
+                    <div class="orbit word2">Ensemble Model</div>
+                    <div class="orbit word3">Grade: A+</div>
+                    <div class="orbit word4">NLP · Arabic Text Analysis</div>
+                    <div class="orbit word5">BERT</div>
+                    <div class="particles"></div>
+                    <!-- End test -->
+                    <canvas id="feat-canvas"></canvas>
+                    <div class="feat-visual-inner">
+                        <div class="feat-visual-ttl">
+                            NLP · Arabic Text Analysis
+                        </div>
+                        <div class="feat-visual-sub">
+                            BiLSTM + BERT Ensemble
+                        </div>
+                        <div
+                            style="
+                                margin-top: 20px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 8px;
+                                justify-content: center;
+                            "
+                        >
+                            <span class="tag">F1: 0.5479</span>
+                            <span class="tag">Ensemble Model</span>
+                            <span class="tag">Grade: A+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rest of projects -->
+            <div class="proj-grid" id="projects-grid"></div>
+        </section>
+
+        <!-- ══════ CERTIFICATES ══════ -->
+        <section id="certificates">
+            <div class="sec-tag reveal">05 — Credentials</div>
+            <h2 class="sec-ttl reveal">
+                Certificates &amp;<br /><em>Achievements</em>
+            </h2>
+            <div class="cert-grid" id="certs-grid"></div>
+        </section>
+
+        <!-- ══════ CONTACT ══════ -->
+        <section id="contact">
+            <div class="contact-glow"></div>
+            <div class="contact-kicker reveal">06 — Let's Connect</div>
+            <h2 class="contact-hl reveal">
+                Ready to build<br />something <em>great</em>
+            </h2>
+            <p class="contact-sub reveal">
+                Open to exciting opportunities and collaborations.<br />Let's
+                create something meaningful together.
+            </p>
+            <div class="contact-acts reveal">
+                <a
+                    href="mailto:mahmoudramzy741@gmail.com"
+                    class="cbtn primary magnetic"
+                    ><span>✉ Email Me</span></a
+                >
+                <a
+                    href="https://www.linkedin.com/in/mahmoud-ramzy-8861aa234/"
+                    target="_blank"
+                    class="cbtn magnetic"
+                    ><span>in LinkedIn</span></a
+                >
+                <a
+                    href="https://github.com/Mahmoud-Ramzy"
+                    target="_blank"
+                    class="cbtn magnetic"
+                    ><span>⌥ GitHub</span></a
+                >
+                <a href="CV/mahmoud_ramzy_cv.pdf" download class="cbtn magnetic"
+                    ><span>↓ Download CV</span></a
+                >
+                <a href="tel:+201001479174" class="cbtn magnetic"
+                    ><span>✆ +20 010 0147 9174</span></a
+                >
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="ftr-brand">Mahmoud Ramzy</div>
+            <div class="ftr-copy">© 2025 · Alexandria, Egypt</div>
+            <div class="ftr-links">
+                <a
+                    href="https://www.linkedin.com/in/mahmoud-ramzy-8861aa234/"
+                    target="_blank"
+                    >LinkedIn</a
+                >
+                <a href="https://github.com/Mahmoud-Ramzy" target="_blank"
+                    >GitHub</a
+                >
+                <a href="mailto:mahmoudramzy741@gmail.com">Email</a>
+            </div>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
